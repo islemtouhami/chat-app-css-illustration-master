@@ -5,6 +5,7 @@ body{
     font-family: "Rubik";
 }
 .contaner{
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -30,7 +31,7 @@ body{
 .one .scrin{
     perspective: 300px;
     animation-name: show-up-scrin;
-     
+    animation-duration: 2.5s;
     align-self: center;
     margin-top: 130px;
     border: 7px solid white;
@@ -43,6 +44,8 @@ body{
 .scrin .top{
     border-radius: 25px 25px 10px 10px;
     background-image: linear-gradient(to left bottom, #e942ff, #8838ff);
+    animation-name: show-up-profil;
+    animation-duration: 3.7s;
 } 
  .scrin .notch{
      margin-left: 24%;
@@ -52,6 +55,12 @@ body{
      border-radius: 0 0 10px 10px;
      background-color: white;
  }
+ .scrin .profil{
+    display: flex;
+    justify-content: space-between;
+    animation-name: show-up-profil;
+    animation-duration: 0.5s;
+}
 .scrin .info{
   display: flex;
 }
@@ -64,10 +73,7 @@ body{
 .scrin .info span{
     display: block;
 }
-.scrin .profil{
-    display: flex;
-    justify-content: space-between;
-}
+
 .top i{
     transform: rotate(90deg);
     margin-right: 7px;
@@ -87,6 +93,8 @@ body{
     padding: 7px;
     display: flex;
     flex-direction: column;
+    animation-name: show-up-bottom;
+    animation-duration: 6s ;
 }
 .scrin .bottom div{
     padding: 4px;
@@ -95,6 +103,7 @@ body{
     border-radius: 10px;
 }
 .bottom .Receive{
+    position: relative;
       color: #9241c8;
   background-color: rgba(229, 112, 255, 0.1);
 }
@@ -257,6 +266,58 @@ body{
             width: 400px;
         }
         }
+        /*animation-message*/
+         .bottom div:first-child{
+            animation-name: animation-message;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+        .bottom div:nth-child(2){
+            animation-name:animation-message ;
+            animation-duration: 4.5s;
+            animation-delay: 1.5s;
+        }
+        .bottom div:nth-child(3){
+            animation-name: animation-message;
+            animation-duration:6s ;
+            animation-delay:2s ;
+        }
+        .bottom div:nth-child(4){
+            animation-name: animation-message;
+            animation-duration:6.5s ;
+            animation-delay:2.5s ;
+        }
+        .bottom div:nth-child(5){
+            animation-name: animation-message;
+            animation-duration:7.5s ;
+            animation-delay:2.7s ;
+        }
+        .bottom div:nth-child(6){
+            animation-name: animation-message;
+            animation-duration:7s;
+            animation-delay:2.9s ;
+        }
+        .bottom div:nth-last-child(4){
+            animation-name: animation-message;
+            animation-duration: 8.5s;
+            animation-delay: 3s;
+        }
+        .bottom div:nth-last-child(3){
+            animation-name: animation-message;
+            animation-duration: 10s;
+            animation-delay: 3.1s;
+        }
+        .bottom div:nth-last-child(2){
+            animation-name: animation-message;
+            animation-duration: 11.5s;
+            animation-delay: 3.2s;
+        }
+        .bottom div:nth-last-child(1){
+            animation-name: animation-message;
+            animation-duration: 13s;
+            animation-delay: 3.3s;
+        }
+        /*end animation-message*/
 @keyframes move {
     0%{
         transform: translate(0 , -500px);
@@ -289,7 +350,60 @@ body{
         opacity: 1;
     }
 }
-
+@keyframes show-up-scrin{
+    0%{
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes show-up-profil{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes show-up-bottom{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes animation-message{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        transform: scale(0.1);
+        transform-origin: 0 100%;
+    }
+     100%{
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: 0 100%;
+    }
+}
 
 
 
