@@ -39,7 +39,7 @@ body{
     background-color:#f5f3f7;
     width: 230px;
     z-index: 0;
-    height: 495px;
+    height: 76vh;
      }
 .scrin .top{
     border-radius: 25px 25px 10px 10px;
@@ -229,9 +229,6 @@ body{
             animation-delay:1s;
      }
         /*end animation-message*/
-
-
-
 .two .bio{
     text-align: center;
 }
