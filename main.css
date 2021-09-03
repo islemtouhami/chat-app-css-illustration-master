@@ -16,7 +16,7 @@ body{
     position:absolute;
     width: 50vw;
     height: 82vh;
-      background-image: linear-gradient(to left bottom, #e942ff, #8838ff);
+    background-image: linear-gradient(to left bottom, #e942ff, #8838ff);
     border-radius: 0 0 200px 0;
     z-index: -1;
     animation-name: move ;
@@ -39,13 +39,13 @@ body{
     background-color:#f5f3f7;
     width: 230px;
     z-index: 0;
-    height: fit-content;
+    height: 495px;
      }
 .scrin .top{
     border-radius: 25px 25px 10px 10px;
     background-image: linear-gradient(to left bottom, #e942ff, #8838ff);
     animation-name: show-up-profil;
-    animation-duration: 3.7s;
+    animation-duration: 3.5s;
 } 
  .scrin .notch{
      margin-left: 24%;
@@ -58,8 +58,6 @@ body{
  .scrin .profil{
     display: flex;
     justify-content: space-between;
-    animation-name: show-up-profil;
-    animation-duration: 0.5s;
 }
 .scrin .info{
   display: flex;
@@ -73,7 +71,6 @@ body{
 .scrin .info span{
     display: block;
 }
-
 .top i{
     transform: rotate(90deg);
     margin-right: 7px;
@@ -94,7 +91,8 @@ body{
     display: flex;
     flex-direction: column;
     animation-name: show-up-bottom;
-    animation-duration: 6s ;
+     animation-duration: 3.6s;
+     animation-delay: 0.3s;
 }
 .scrin .bottom div{
     padding: 4px;
@@ -121,18 +119,23 @@ body{
 {
     width: fit-content;
     background-color:white;
-}
-.bottom div:nth-of-type(5){
-   width: fit-content;
-}
-.bottom .imges{
     align-self: flex-end;
     width: fit-content;  
+    animation-name: animation-message ;
+    animation-duration: 4.5s;
+    animation-delay:1s;
 }
+
 .bottom .imges img{
     border-radius: 10px;
     width: 40px;
     height: 40px;
+}
+.bottom div:nth-of-type(5){
+    animation-name: animation-message ;
+    animation-duration: 4s;
+    animation-delay:2.2s;
+    width: fit-content;
 }
 .scrin .bottom div:nth-last-of-type(2),
 .scrin .bottom div:nth-last-of-type(3){
@@ -162,6 +165,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    animation-name: animation-message;
+    animation-duration: 8.7s;
+    animation-delay:1s;
 }
 .bottom div:last-child span:first-child{
     font-size: 0.3rem;
@@ -181,6 +187,51 @@ body{
     color: white;
     background-color: hsl(271, 36%, 24%);
 }
+/*animation-message*/
+         .bottom div:first-child{
+            animation-name: animation-message;
+            animation-duration: 2s;
+            animation-delay:0.5s;
+        }
+        .bottom div:nth-child(2){
+            animation-name:animation-message ;
+           animation-duration: 3.5s;
+            animation-delay:1s;
+        }
+        .bottom div:nth-child(4){
+            animation-name: animation-message;
+            animation-duration: 3s;
+            animation-delay:2.5s;
+        }
+        .bottom div:nth-child(5){
+            animation-name: animation-message ;
+            animation-duration: 4s;
+            animation-delay:2.2s;
+        }
+        .bottom div:nth-child(6){
+            animation-name: animation-message;
+            animation-duration: 5s;
+            animation-delay:2.2s;
+        }
+        .bottom div:nth-last-child(4){
+            animation-name: animation-message;
+            animation-duration: 6s;
+            animation-delay:2.2s;
+        }
+        .bottom div:nth-last-child(3){
+            animation-name: animation-message;
+            animation-duration: 7s;
+            animation-delay:1s;
+        }
+        .bottom div:nth-last-child(2){
+            animation-name: animation-message;
+             animation-duration: 7.8s;
+            animation-delay:1s;
+     }
+        /*end animation-message*/
+
+
+
 .two .bio{
     text-align: center;
 }
@@ -266,58 +317,7 @@ body{
             width: 400px;
         }
         }
-        /*animation-message*/
-         .bottom div:first-child{
-            animation-name: animation-message;
-            animation-duration: 3s;
-            animation-delay: 1s;
-        }
-        .bottom div:nth-child(2){
-            animation-name:animation-message ;
-            animation-duration: 4.5s;
-            animation-delay: 1.5s;
-        }
-        .bottom div:nth-child(3){
-            animation-name: animation-message;
-            animation-duration:6s ;
-            animation-delay:2s ;
-        }
-        .bottom div:nth-child(4){
-            animation-name: animation-message;
-            animation-duration:6.5s ;
-            animation-delay:2.5s ;
-        }
-        .bottom div:nth-child(5){
-            animation-name: animation-message;
-            animation-duration:7.5s ;
-            animation-delay:2.7s ;
-        }
-        .bottom div:nth-child(6){
-            animation-name: animation-message;
-            animation-duration:7s;
-            animation-delay:2.9s ;
-        }
-        .bottom div:nth-last-child(4){
-            animation-name: animation-message;
-            animation-duration: 8.5s;
-            animation-delay: 3s;
-        }
-        .bottom div:nth-last-child(3){
-            animation-name: animation-message;
-            animation-duration: 10s;
-            animation-delay: 3.1s;
-        }
-        .bottom div:nth-last-child(2){
-            animation-name: animation-message;
-            animation-duration: 11.5s;
-            animation-delay: 3.2s;
-        }
-        .bottom div:nth-last-child(1){
-            animation-name: animation-message;
-            animation-duration: 13s;
-            animation-delay: 3.3s;
-        }
-        /*end animation-message*/
+        
 @keyframes move {
     0%{
         transform: translate(0 , -500px);
